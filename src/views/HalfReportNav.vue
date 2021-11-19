@@ -1,120 +1,96 @@
-<template style="overflow-x: hidden; height: 100%;">
-  <v-container fluid style="background-color: #F5F5F5; height: auto; overflow-x: hidden; ">
-    <div >
-      <!-- HEADER -->
-      <v-app-bar  id="header"  color="#202020" dark style="height: 80px; position: fixed"
-      
-      absolute
+<template>
+  <v-container fluid>
+    <!-- HEADER -->
+    <Header />
+      <div style="background-color:red;">
+      <v-card
+        color="gray"
+        outlined
+        style="text-align: left"
       >
-        <v-app-bar-nav-icon class="mt-4"></v-app-bar-nav-icon>
-        <v-spacer />
-        <v-card class="mt-4" height="45" color="#363636" style="border-radius: 40px">
-          <v-row >
-            <v-col>
-              <v-avatar size="38" class="mt-1 ml-2">
-                <img src="https://cdn.vuetifyjs.com/images/john.jpg " alt="John" />
-              </v-avatar>
-            </v-col>
-            <v-col >
-              <v-card-subtitle class="mt-n1 ml-n3" style="font-weight: bold">sdafsafsadf
-              </v-card-subtitle>
-            </v-col>
-          </v-row>
-        </v-card>
-      </v-app-bar>
-    </div>
-    
+        <v-row>
+          <v-col>
+            <v-list-item three-line>
+              <v-list-item-content>
+                <v-list-item-title>
+                  <h4 style="color: black">
+                    &emsp;<b>
+                      Organization Type: &emsp; &emsp; &emsp; &emsp; &emsp;
+                      &emsp; &emsp; &nbsp;</b
+                    >
+                    Retails
+                  </h4>
+                  <br />
+                  <h4 style="color: black">
+                    &emsp;<b>
+                      Organization Status: &emsp; &emsp; &emsp; &emsp; &emsp;
+                      &emsp; &emsp;</b
+                    >sdasd
+                  </h4>
+                  <br />
+                  <h4 style="color: black">
+                    &emsp;<b>
+                      Organization Address: &emsp; &emsp; &emsp; &emsp; &emsp;
+                      &emsp; &nbsp;</b
+                    >Huamak
+                  </h4>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-col>
+        </v-row>
+      </v-card>
+    </div> 
 
-    <!-- SIDEBAR -->
-    <div fluid >
-      <!-- iCON AND TILTE OF SIDEBAR -->
-      <v-navigation-drawer
-        fluid
+    <!-- <div style="background-color:red;">
+      <v-card
+        color="gray"
+        outlined
+        absolute
         dense
-        
-        :mini-variant.sync="mini"
-        style="margin-top: 81px"
-        value="true"
-        id="sidebar"
-        app 
-        v-model="drawer">
-        <br>
-        <v-list-item >
-        <v-list-item-title id="texts" 
-            ><h3>Sondhana Influncer</h3> </v-list-item-title> 
-        </v-list-item>
-        <v-list-item-title id="texts" 
-            >www.Sondhana.com</v-list-item-title>
-          <br>
-          <hr style="height: 2px; background-color: #F5F5F5; border: none;">
-
-        <!-- ITEM ICONS IN SIDEBAR AND THE SIDEBAR  -->
-        
-        <div >
-        <v-expansion-panels
-        v-model="panel"
-        :disabled="disabled"
-        multiple
-        
-        >
-      <v-expansion-panel >
-        <v-expansion-panel-header style="text-color: blue;">Overall</v-expansion-panel-header>
-        <v-expansion-panel-content style="width: 100%;">
-          <v-list-item
-            v-for="item in items"
-            :key="item.title"
-            :to="item.href"
-            link
-            id="li"
-            
-          >
-            <v-list-item-content >
-              <v-list-item-title >{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>
-  </div>
-  
-      </v-navigation-drawer>
-      
-  </div>
-   <div>
-          <v-card class="mt-12" color="gray" outlined absolute dense style="text-align: left" > 
-            <v-row>
-              <v-col>
-                <v-list-item three-line>
-                  <v-list-item-content>
-                    <v-list-item-title>
-                    <h4 style="color: black">&emsp;<b> Organization Type: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp;</b> Retails</h4>
-                    <br>
-                    <h4 style="color: black">&emsp;<b> Organization Status: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</b>Trial</h4>
-                    <br>
-                    <h4 style="color: black">&emsp;<b> Organization Address: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &nbsp;</b>Huamak</h4>
-                    </v-list-item-title>
-                   
-                  </v-list-item-content>
-                </v-list-item>
-              </v-col>
-            </v-row>
-          </v-card>
-   </div>
-      
-
-
-
-
-
-
-
+        style="text-align: left"
+      >
+        <v-row>
+          <v-col>
+            <v-list-item three-line>
+              <v-list-item-content>
+                <v-list-item-title>
+                  <h4 style="color: black">
+                    &emsp;<b>
+                      Organization Type: &emsp; &emsp; &emsp; &emsp; &emsp;
+                      &emsp; &emsp; &nbsp;</b
+                    >
+                    Retails
+                  </h4>
+                  <br />
+                  <h4 style="color: black">
+                    &emsp;<b>
+                      Organization Status: &emsp; &emsp; &emsp; &emsp; &emsp;
+                      &emsp; &emsp;</b
+                    >sdasd
+                  </h4>
+                  <br />
+                  <h4 style="color: black">
+                    &emsp;<b>
+                      Organization Address: &emsp; &emsp; &emsp; &emsp; &emsp;
+                      &emsp; &nbsp;</b
+                    >Huamak
+                  </h4>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-col>
+        </v-row>
+      </v-card>
+    </div> 
+ -->
     <!-- <div class="context">
       <v-row>
         <v-col cols="12">
           <center> -->
-            <!--  <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in" >
+    <!--  <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in" >
               <div v-if="showWithDelay" style="min-height:100vh"> -->
-            <!-- <div v-motion-slide-top :delay="300">
+    <!-- <div v-motion-slide-top :delay="300">
               <h1>สวัสดี,</h1>
 
               <h3>asdasdas</h3>
@@ -138,9 +114,9 @@
                 class="mx-auto mt-n12"
               />
             </div> -->
-            <!-- </div>
+    <!-- </div>
             </transition> -->
-            <!-- <div v-motion-slide-visible-right :delay="200">
+    <!-- <div v-motion-slide-visible-right :delay="200">
               <p class="mt-n6">
                 ไปดูกันเลย<br />
                 ว่าปีที่ผ่านมาเป็นยังไงบ้าง
@@ -312,6 +288,8 @@
 </template>
 
 <script>
+import Header from "../components/Header.vue";
+
 export default {
   name: "HalfReport",
 
@@ -330,29 +308,22 @@ export default {
     },
     menuItems: [],
     items: [
-     
       {
         title: "Youtube",
-        
       },
       {
         title: "Facebook",
-        
       },
       {
         title: "Instagram",
-        
       },
       {
         title: "Tiktok",
-        
       },
     ],
 
- 
     fullName: null,
   }),
-  
 
   created() {
     this.youtubeDetails = JSON.parse(localStorage.getItem("youtubeResData"));
@@ -367,7 +338,9 @@ export default {
     }, 2050);  */
   },
 
-  components: {},
+  components: {
+    Header,
+  },
 };
 </script>
 
@@ -378,32 +351,27 @@ export default {
 * {
   margin: 0px;
   padding: 0px;
-  
 }
 #texts {
-    text-align: center;
-   
+  text-align: center;
 }
-#sidebar{
-    position: fixed;
-    background: #ffffff;
-    width: 200px;
-    height: 100%;
-    bottom: 0%;
-    left: 0;
-    top: 0%;
-    z-index: 1;
-    overflow: hidden;
+#sidebar {
+  position: fixed;
+  background: #ffffff;
+  width: 200px;
+  height: 100%;
+  bottom: 0%;
+  left: 0;
+  top: 0%;
+  z-index: 1;
+  overflow: hidden;
 }
-
-
 
 #header {
   position: fixed;
   top: 0%;
-  height:5%;
-  width:100%;
-  
+  height: 5%;
+  width: 100%;
 }
 
 h1 {
@@ -437,9 +405,8 @@ p {
   font-weight: 700;
 }
 #li:hover {
-  background-color: #6699CC;
+  background-color: #6699cc;
 }
-
 
 #span2 {
   color: #fff;

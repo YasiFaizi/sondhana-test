@@ -1,9 +1,5 @@
 <template>
   <v-app id="app">
- <!-- <transition name="first" enter-active-class="animated
-            bounceInDown" leave-active-class="animated bounceInDown" >
-      <router-view/>
-   </transition>  -->
     <router-view/>
   </v-app>
 </template>
@@ -17,6 +13,9 @@ export default {
   data: () => ({
     //
   }),
+
+  components:{
+  }
 };
 </script>
 <style>
